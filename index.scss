@@ -1,0 +1,77 @@
+$text-align: center;
+
+div{
+h1{
+  text-align: $text-align;
+  color: blue;
+}
+h3{
+  text-align: $text-align;
+  color:red;
+}
+p{
+  text-align: $text-align;
+  color:#EE82EE;
+}
+}
+
+@media (min-width: 500px){
+    .grid{
+      background-color: lightgreen;
+    }
+}
+@media (max-width: 499px) {
+  .grid{
+    background-color: green;
+  }
+
+}
+.grid {
+  background-color: lightgreen;
+  display: grid;
+  padding: 20px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 250px 250px;
+}
+  .grid-item{
+    background-color: white;
+    display: grid;
+    align-items: center;
+    font-size: 20px;
+    padding: 50px;
+    height: 150px;
+    width: 500px;
+    margin: auto;
+    text-align:center;
+
+  }
+%message {
+  height: 250px;
+  width: 600px;
+  padding: 0;
+}
+.one{
+  background: url('MIC.jpg');
+  @extend %message;
+
+
+}
+.two{
+  background: url('img2.jpg');
+  @extend %message;
+
+
+}
+.three{
+  background: url('img4.jpg');
+  @extend %message;
+
+
+}
+.four{
+  background: url('cat.jpg');
+  @extend %message;
+
+}
